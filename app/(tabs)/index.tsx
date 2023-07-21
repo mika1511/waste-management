@@ -3,12 +3,16 @@ import { StyleSheet, Image } from "react-native";
 import EditScreenInfo from "../../components/EditScreenInfo";
 import { Text, View } from "../../components/Themed";
 import { scale, verticalScale } from "react-native-size-matters";
-import { ScrollView } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import { Link } from "expo-router";
 
 export default function TabOneScreen() {
   return (
-    <ScrollView>
-      <View style={styles.container}>
+    <View style={styles.container}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{ display: "flex", flex: 1 }}
+      >
         <Text
           style={[
             styles.title,
@@ -36,10 +40,13 @@ export default function TabOneScreen() {
             marginTop: scale(10),
             flexDirection: "row",
             gap: scale(30),
+            justifyContent: "space-around",
             backgroundColor: "#ede9e9",
           }}
         >
+          <Link href={"/nvg_page"} >
           <View style={[styles.services_box, styles.shadow]}>
+          
             <View
               style={{
                 height: scale(70),
@@ -58,17 +65,20 @@ export default function TabOneScreen() {
                 }}
                 source={require("../../assets/images/base_icon.png")}
               />
+             
             </View>
             <Text
               style={{
                 alignSelf: "center",
                 justifyContent: "flex-end",
+                fontSize: scale(13),
                 fontWeight: "bold",
               }}
             >
               TRACK
             </Text>
           </View>
+          </Link>
           <View style={[styles.services_box, styles.shadow]}>
             <View
               style={{
@@ -93,6 +103,7 @@ export default function TabOneScreen() {
               style={{
                 alignSelf: "center",
                 justifyContent: "flex-end",
+                fontSize: scale(13),
                 fontWeight: "bold",
               }}
             >
@@ -131,8 +142,8 @@ export default function TabOneScreen() {
             </Text>
           </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 }
 
@@ -144,7 +155,7 @@ const styles = StyleSheet.create({
   },
   title: {
     alignSelf: "flex-start",
-    marginLeft: scale(30),
+    //marginLeft: scale(30),
     verticalAlign: "top",
     fontSize: scale(20),
     fontWeight: "bold",

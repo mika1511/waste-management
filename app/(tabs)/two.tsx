@@ -2,13 +2,11 @@ import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
-
+import WebView from 'react-native-webview';
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-        <Text>
-          Header Of The Screen
-        </Text>
+    
     </View>
   );
 }

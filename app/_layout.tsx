@@ -49,3 +49,7 @@ function RootLayoutNav() {
     </>
   );
 }
+
+function TestLayout() {
+  const colorScheme = useColorScheme();
+}
