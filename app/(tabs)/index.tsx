@@ -3,9 +3,12 @@ import { StyleSheet, Image } from 'react-native';
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 import { scale, verticalScale } from 'react-native-size-matters';
+import { ScrollView } from 'react-native';
+
 
 export default function TabOneScreen() {
   return (
+    <ScrollView>
     <View style={styles.container}>
       <Text style={[styles.title, {
         marginVertical: scale(10),
@@ -91,6 +94,7 @@ export default function TabOneScreen() {
         </View>
       </View>
     </View>
+    </ScrollView>
   );
 }
 
