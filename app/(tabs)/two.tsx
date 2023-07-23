@@ -37,7 +37,7 @@ export default function TabTwoScreen() {
             ]}
           >
            
-            <Text style={styles.title}>Profile                    </Text>
+            <Text style={styles.title}>Profile                   </Text>
             {/* <View style={{height: scale(30),width: "50%",backgroundColor:"grey"}}></View> */}
             <View style={{
               left: 100
@@ -64,7 +64,7 @@ export default function TabTwoScreen() {
               styles.cont_,
               { flexDirection: "row", justifyContent: "space-between" },
             ]}>
-            <Text style={styles.title}>Language Setting                   </Text>
+            <Text style={styles.title}>Language Setting                  </Text>
             <FontAwesome
               name="language"
               size={20}

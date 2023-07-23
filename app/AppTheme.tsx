@@ -9,7 +9,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 export default function AppThemeScreen() {
   return (
     <View style={styles.container}><ScrollView>
-      
+      <Text style={{fontSize: scale(18),textAlign:"left", marginLeft: scale(30), marginTop: scale(20)}}>Select A Theme For Your App:</Text>
       
 
       
