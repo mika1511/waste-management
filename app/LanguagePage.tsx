@@ -6,15 +6,13 @@ import { Text, View } from '../components/Themed';
 import { ScrollView } from 'react-native-gesture-handler';
 
 
-export default function ModalScreen() {
+export default function LanguageScreen() {
   return (
     <View style={styles.container}><ScrollView>
-      <Text style={{fontSize: scale(25), fontWeight: "bold", alignSelf:"center", marginTop: scale(60)}}>Profile</Text>
-      
       
       
 
-     
+      
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
       </ScrollView>
     </View>
@@ -24,8 +22,6 @@ export default function ModalScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    
-    
   },
   title: {
     fontSize: scale(20),

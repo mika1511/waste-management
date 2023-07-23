@@ -18,6 +18,7 @@ export default function TabOneScreen() {
             styles.title,
             {
               marginVertical: scale(10),
+              color: "black",
             },
           ]}
         >
@@ -33,7 +34,7 @@ export default function TabOneScreen() {
             source={require("../../assets/images/Green.jpg")}
           />
         </View>
-        <Text style={styles.title}>{"\nServices"}</Text>
+      <Text style={[styles.title,{color: "black",}]}>{"\nServices"}</Text>
 
         <View
           style={{
@@ -44,7 +45,7 @@ export default function TabOneScreen() {
             backgroundColor: "#ede9e9",
           }}
         >
-          <Link href={"/nvg_page"} >
+          <Link href={"/Track"} >
           <View style={[styles.services_box, styles.shadow]}>
           
             <View
@@ -73,12 +74,14 @@ export default function TabOneScreen() {
                 justifyContent: "flex-end",
                 fontSize: scale(13),
                 fontWeight: "bold",
+                color: "black",
               }}
             >
               TRACK
             </Text>
           </View>
           </Link>
+          <Link href={"/Scan"}>
           <View style={[styles.services_box, styles.shadow]}>
             <View
               style={{
@@ -105,11 +108,13 @@ export default function TabOneScreen() {
                 justifyContent: "flex-end",
                 fontSize: scale(13),
                 fontWeight: "bold",
+                color: "black",
               }}
             >
               SCAN
             </Text>
           </View>
+          </Link>
           <View style={[styles.services_box, styles.shadow]}>
             <View
               style={{
@@ -136,6 +141,7 @@ export default function TabOneScreen() {
                 justifyContent: "flex-end",
                 fontSize: scale(12),
                 fontWeight: "bold",
+                color: "black",
               }}
             >
               COMPLAINT
