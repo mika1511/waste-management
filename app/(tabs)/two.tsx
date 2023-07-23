@@ -6,7 +6,12 @@ import WebView from "react-native-webview";
 import Colors from "../../constants/Colors";
 import { ScrollView } from "react-native-gesture-handler";
 import { Link } from "expo-router";
+import { FontAwesome } from "@expo/vector-icons";
+import { Pressable, useColorScheme } from "react-native";
+
 export default function TabTwoScreen() {
+  const colorScheme = useColorScheme();
+
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -14,15 +19,35 @@ export default function TabTwoScreen() {
           style={{
             fontSize: scale(30),
             alignSelf: "flex-start",
-            color: "black",
+
             marginLeft: scale(20),
           }}
         >
           {"My\n"}
         </Text>
-        <Link href="/modal">
-          <View style={styles.cont_}>
+
+
+        <Link href={"/modal"}>
+          <View style={{
+            width: "auto",
+            height: "auto",
+            display : "flex",
+          }}>
+          <View
+            style={[
+              styles.cont_,
+              { flexDirection: "row", justifyContent: "space-between" },
+            ]}
+          >
             <Text style={styles.title}>Profile</Text>
+            {/* <View style={{height: scale(30),width: "50%",backgroundColor:"grey"}}></View> */}
+            <FontAwesome
+              name="user-o"
+              size={20}
+              color={Colors[colorScheme ?? "light"].text}
+              style={{ marginTop: scale(3), marginRight: scale(40) }}
+            />
+          </View>
           </View>
         </Link>
 
@@ -60,8 +85,6 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
-    backgroundColor: "white",
   },
   title: {
     fontSize: scale(20),
@@ -79,6 +102,6 @@ const styles = StyleSheet.create({
     height: scale(40),
     width: "100%",
     justifyContent: "center",
-    
+    backgroundColor: "grey"
   },
 });
