@@ -9,6 +9,7 @@ import { Link } from "expo-router";
 import { FontAwesome } from "@expo/vector-icons";
 import { Pressable, useColorScheme } from "react-native";
 
+
 export default function TabTwoScreen() {
   const colorScheme = useColorScheme();
 
@@ -27,29 +28,30 @@ export default function TabTwoScreen() {
         </Text>
 
 
-        <Link href={"/modal"}>
-          <View style={{
-            width: "auto",
-            height: "auto",
-            display : "flex",
-          }}>
+          
+          <Link href={"/modal"}>
           <View
             style={[
               styles.cont_,
-              { flexDirection: "row", justifyContent: "space-between" },
+              { flexDirection: "row"},
             ]}
           >
-            <Text style={styles.title}>Profile</Text>
+           
+            <Text style={styles.title}>Profile                    </Text>
             {/* <View style={{height: scale(30),width: "50%",backgroundColor:"grey"}}></View> */}
+            <View style={{
+              left: 100
+            }}>
             <FontAwesome
               name="user-o"
               size={20}
               color={Colors[colorScheme ?? "light"].text}
-              style={{ marginTop: scale(3), marginRight: scale(40) }}
+              style={{ marginTop: scale(3) }}
             />
+            </View>
+          
           </View>
-          </View>
-        </Link>
+            </Link>
 
         <View
           style={[styles.separator, { marginTop: 10 }]}
@@ -58,8 +60,17 @@ export default function TabTwoScreen() {
         />
 
         <Link href={"/LanguagePage"}>
-          <View style={styles.cont_}>
-            <Text style={styles.title}>Language Setting</Text>
+          <View style={[
+              styles.cont_,
+              { flexDirection: "row", justifyContent: "space-between" },
+            ]}>
+            <Text style={styles.title}>Language Setting                   </Text>
+            <FontAwesome
+              name="language"
+              size={20}
+              color={Colors[colorScheme ?? "light"].text}
+              style={{ marginTop: scale(3)}}
+            />
           </View>
         </Link>
 
@@ -68,10 +79,20 @@ export default function TabTwoScreen() {
           lightColor="#eee"
           darkColor="rgba(255,255,255,0.1)"
         />
-
-        <View style={styles.cont_}>
-          <Text style={styles.title}>App Theme</Text>
+        <Link href={"/AppTheme"}>
+        <View style={[
+              styles.cont_,
+              { flexDirection: "row", justifyContent: "space-between" },
+            ]}>
+          <Text style={styles.title}>App Theme                              </Text>
+          <FontAwesome
+              name="moon-o"
+              size={20}
+              color={Colors[colorScheme ?? "light"].text}
+              style={{ marginTop: scale(3), marginRight: scale(40) }}
+            />
         </View>
+        </Link>
         <View
           style={[styles.separator, { marginTop: 10 }]}
           lightColor="#eee"
@@ -101,7 +122,8 @@ const styles = StyleSheet.create({
   cont_: {
     height: scale(40),
     width: "100%",
+    minWidth:"80%",
     justifyContent: "center",
-    backgroundColor: "grey"
+    
   },
 });
