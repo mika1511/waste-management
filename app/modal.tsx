@@ -21,16 +21,16 @@ export default function ModalScreen() {
 
   const [fileResponse, setFileResponse] = useState([]);
 
-  const handleDocumentSelection = useCallback(async () => {
-    try {
-      const response = await DocumentPicker.pick({
-        presentationStyle: 'fullScreen',
-      });
-      setFileResponse(response);
-    } catch (err) {
-      console.warn(err);
-    }
-  }, []);
+  // const handleDocumentSelection = useCallback(async () => {
+  //   try {
+  //     const response = await DocumentPicker.pick({
+  //       presentationStyle: 'fullScreen',
+  //     });
+  //     setFileResponse(response);
+  //   } catch (err) {
+  //     console.warn(err);
+  //   }
+  // }, []);
 
   
     const [image, setImage] = useState<string | null>(null);
@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: scale(34),
     backgroundColor: "#D3D3D3",
-    opacity: 50
   },
   text: {
     color: "black",
